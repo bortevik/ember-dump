@@ -1,3 +1,6 @@
-h2#title Welcome to Ember.js
+h2#title Ember-dump
+
+= link-to 'articles' tagName="button" | Articles
+= link-to 'posts' tagName="button" | Posts
 
 outlet

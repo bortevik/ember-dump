@@ -1,0 +1,5 @@
+h2 Posts
+hr
+each
+  h3 = title
+  p = body

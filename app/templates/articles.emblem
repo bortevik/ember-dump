@@ -1,0 +1,5 @@
+h2 Articles
+hr
+each
+  h3 = title
+  p = body
