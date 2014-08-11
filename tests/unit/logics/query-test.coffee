@@ -1,6 +1,5 @@
 `import QueryLogic from '../../../logics/query'`
 `import { test } from 'ember-qunit'`
-`import Ember from 'ember'`
 
 module 'Logics - Query',
   teardown: ->
