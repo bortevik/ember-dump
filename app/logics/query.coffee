@@ -14,7 +14,7 @@ QueryLogic = Ember.Object.extend().reopenClass
       if self._isQueryRequested(type, query)
         self._getCached(type, query)
       else
-        @_super(type, query).then (collection)=>
+        @_super(type, query).then (collection)->
           self._setCached(type, query, collection)
           collection
 
@@ -35,7 +35,7 @@ QueryLogic = Ember.Object.extend().reopenClass
 
      return false if k1.length != k2.length
 
-     k1.every (key)->
+     k1.every (key)=>
        if typeof o1[key] == typeof o2[key] == "object"
          @_deepEquals(o1[key], o2[key])
        else

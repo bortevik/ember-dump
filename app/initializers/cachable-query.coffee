@@ -3,7 +3,7 @@
 
 CachableQuery =
   name: 'cachableQuery'
-  initialize: (container, app)->
+  initialize: ->
     EmberData.Store.reopen
       findQuery: QueryLogic.cachableFindQuery()
 
