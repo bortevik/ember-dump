@@ -1,6 +1,7 @@
 module.exports = function(app) {
   app.get('/posts', function(req, res) {
     res.send({
+      meta: {uid: 321},
       posts:[
         {
           id: 4,
