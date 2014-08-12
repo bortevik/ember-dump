@@ -1,4 +1,11 @@
 # Ember-dump
+Utility for caching findQuery requests.
+
+You can configure your request to not cache by setting request option `cache` to `false`.
+
+```coffeescript
+  store.find('post', published: true, cache: false)
+```
 
 This README outlines the details of collaborating on this Ember application.
 
