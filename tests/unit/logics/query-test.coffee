@@ -39,7 +39,6 @@ test '_getCached gets saved collection', ->
   type = 'foo'
   query = {bar: 'one', baz: 1}
   collection = 'some collection'
-  cachedObject = {query: query, collection: collection}
 
   QueryLogic._setCached(type, query, collection)
   QueryLogic._setCached('some type', {goo: true}, 'another collection')
@@ -49,9 +48,7 @@ test '_isQueryRequested checks whether such request occured', ->
   type = 'foo'
   query = {bar: 'one', baz: 1}
   collection = 'some collection'
-  cachedObject = {query: query, collection: collection}
 
   QueryLogic._setCached(type, query, collection)
   QueryLogic._setCached('some type', {goo: true}, 'another collection')
   ok(QueryLogic._isQueryRequested(type, query))
-

@@ -10,11 +10,11 @@ QueryLogic = Ember.Object.extend().reopenClass
 
   cachableFindQuery: ->
     self = @
-    (type, query)->
+    (type, query) ->
       if self._isQueryRequested(type, query)
         self._getCached(type, query)
       else
-        @_super(type, query).then (collection)->
+        @_super(type, query).then (collection) ->
           self._setCached(type, query, collection)
           collection
 
@@ -22,7 +22,6 @@ QueryLogic = Ember.Object.extend().reopenClass
     return false unless @get('queryCache')
     cachedQueries = @get('queryCache').get(type)
     return false unless cachedQueries
-
     cachedQueries.any (cachedQuery)=>
       @_deepEquals(query, cachedQuery.query)
 
@@ -62,4 +61,3 @@ QueryLogic = Ember.Object.extend().reopenClass
     queryCache.set(type, typeArray)
 
 `export default QueryLogic`
-
